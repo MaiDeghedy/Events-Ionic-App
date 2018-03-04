@@ -1,0 +1,132 @@
+
+<ion-header>
+    <ion-navbar hideBackButton="false"></ion-navbar>>
+</ion-header>
+<ion-content>
+  <ion-card>
+
+    <img [src]="selectedEvent?.ImageURL" />
+    <ion-card-content class="single">
+      <div class="eventTitle">
+        <ion-card-title>
+          <h1 class="eventTitle__Heading">{{selectedEvent.Title}}</h1>
+        </ion-card-title>
+        <p class="eventTitle__Description">
+          {{selectedEvent.Description}}
+        </p>
+      </div>
+      <div class="eventinfo">
+        <ion-icon name="time" class="EventInfo__Icons">
+          <span>{{selectedEvent.Date | date: 'EEEE MMM,d'}} From {{selectedEvent.Date | date: 'h'}} {{(selectedEvent.Date | date:
+            'h') >12 ?"PM":"AM"}} - 11 PM</span>
+        </ion-icon>
+        <ion-icon name="pin" class="EventInfo__Icons">
+          <span>The Pool. The Student Hotel Amsterdam City</span>
+        </ion-icon>
+        <ion-icon name="speedometer" class="EventInfo__Icons">
+          <span>{{selectedEvent.Members.length}} Going </span>
+        </ion-icon>
+
+
+      </div>
+      <div class="eventContent singleEventContent">
+        <ion-item>
+
+          <div class="eventContent__attendance">
+            <span *ngFor="let member of selectedEvent.Members;let i=index;">
+
+              <ion-avatar *ngIf="i<8" class="eventContent__attendance--images">
+                <img [src]="member.photo" />
+              </ion-avatar>
+            </span>
+            <ion-avatar class="eventContent__attendance--text" *ngIf="selectedEvent.Members.length>=8">
+              <span>8+</span>
+            </ion-avatar>
+          </div>
+        </ion-item>
+        <p>{{staticDetails}}</p>
+      </div>
+
+
+
+
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+    <div class="typePost">
+      <ion-textarea class="typePost__textBox" placeholder="Leave a message.." block></ion-textarea>
+    </div>
+  </ion-card>
+  <div class="post">
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img class="post__image" src="https://media.simplecast.com/episode/image/72582/thumb_1497159762-artwork.jpg">
+        </ion-avatar>
+        <h2 post__title>Lucien Van Geffen
+          <span>Shared a link</span>
+        </h2>
+
+        <ion-icon name="time" class="post__date">14 min ago</ion-icon>
+      </ion-item>
+      <ion-card-content>
+        <p class="post__content">How to ride like a real Dutchie!</p>
+      </ion-card-content>
+      <ion-col>
+        <div class="sharedContent">
+          <img class="sharedContent__image" src="../../assets/imgs/link-image.jpg">
+          <h5 class="sharedContent__heading">the bike instructor's guide to cycling</h5>
+          <p class="sharedContent__paragraph">Thankfully, Maxim Hartman aka The Bike Instructor is</p>
+          <a class="sharedContent__link" href="http://www.youtube.com">youtube.com</a>
+        </div>
+      </ion-col>
+      <ion-row>
+        <ion-icon name="thumbs-up" class="post__count--highFive">12</ion-icon>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="thumbs-up" class="post__interactive">High Five</ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="text" class="post__interactive">Comment</ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img class="post__image" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8W2rlxCOL0g/v0/400x-1.jpg">
+        </ion-avatar>
+        <h2 class="post__title">Lucien Van Geffen</h2>
+        <ion-icon name="time" class="post__date"> 23 min ago</ion-icon>
+      </ion-item>
+      <ion-card-content>
+        <p class="post__content">Is it possible to leave after an hour?I would love to join,but I have another appointment later that evening..</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-icon name="text" class="post__count--comment">1</ion-icon>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+          <ion-icon name="thumbs-up" class="post__interactive">High Five</ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="text" class="post__interactive">Comment</ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+
+
+  </div>
+
+
+
+</ion-content>

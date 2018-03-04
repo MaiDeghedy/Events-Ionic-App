@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchText" [showCancelButton]="true" (ionInput)="filter($event)" placeholder="Search event"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+<div class="alert-warning" *ngIf="showNoDataMsg">No Events with this name</div>
+<div class="alert-error" *ngIf="showErrorMsg">Oops! Something went wrong</div>
+<div *ngIf="!showNoDataMsg && !loading && !showErrorMsg">
+  <ion-list *ngFor="let category of categories">
+    <h2>{{category}}</h2>
+    <div *ngIf="filteredEventsDic[category]?.length>0">
+      <ion-item *ngFor="let item of filteredEventsDic[category]">
+        <event-item [event]="item"></event-item>
+      </ion-item>
+    </div>
+    <span class="noEvents" *ngIf="filteredEventsDic[category]?.length==0">There is No Events on {{category}}</span>
+  </ion-list>
+</div>
+
+</ion-content>

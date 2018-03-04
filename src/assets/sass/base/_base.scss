@@ -1,0 +1,14 @@
+//reset
+*{
+    font-size: 66.6%; //font size to be equal 10 pixel to use it with Rem
+}
+
+
+h1,h2,h3,h4,h5,h6,p,button,a,li,span{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:1.8rem;
+}
+
+.ion-page > ion-content{
+    background:$grayColor;
+}

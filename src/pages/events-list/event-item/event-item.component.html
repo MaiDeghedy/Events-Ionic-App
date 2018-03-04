@@ -1,0 +1,33 @@
+<button class="EventImage" (click)="eventTapped($event, event)">
+
+    <img class="EventImage__image" [src]="event.ImageURL" />
+    <div class="EventImage__date">
+        <h3> {{event.Date | date: 'd'}}</h3>
+        <h4> {{event.Date | date: 'MMM'}}</h4>
+    </div>
+
+</button>
+
+<div class="eventContent">
+    <div (click)="eventTapped($event, event)">
+        <h5> {{event.Title}}</h5>
+        <span class="event-date">
+            {{event.Date | date: 'EEEE'}} from {{event.Date | date: 'h'}} {{(event.Date | date: 'h') >12 ?"PM":"AM"}}
+        </span>
+        <div class="eventContent__attendance">
+            <span *ngFor="let member of event.Members;let i=index;">
+                <ion-avatar *ngIf="i<3" class="eventContent__attendance--images">
+                    <img  [src]="member.photo" />
+                </ion-avatar>
+            </span>
+            <ion-avatar class="eventContent__attendance--text" *ngIf="event.Members.length>=3">
+                <span>+{{event.Members.length - 3}} Others</span>
+            </ion-avatar>
+        </div>
+    </div>
+    <div class="eventactions">
+        <button [class]="event.IsGoing?'eventactions__button going':'eventactions__button'" (click)="toggleIsGoing(event)" *ngIf="!event.IsIgnored">Going</button>
+        <button [class]="event.IsIgnored?'eventactions__button ignore':'eventactions__button'" (click)="toggleIsIgnored(event)" *ngIf="!event.IsGoing">Ignore</button>
+    </div>
+
+</div>

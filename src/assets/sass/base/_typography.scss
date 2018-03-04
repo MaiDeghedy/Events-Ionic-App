@@ -1,0 +1,235 @@
+// search Text and place holder style
+.searchbar-md .searchbar-input{
+    @include designFont($blackColor,1.6rem,400,normal);
+    text-align: center;
+}
+
+.searchbar-md .searchbar-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  @include designFont($blackColor,1.6rem,400,normal);
+}
+.searchbar-md .searchbar-input::-moz-placeholder { /* Firefox 19+ */
+  @include designFont($blackColor,1.6rem,400,normal);
+}
+.searchbar-md .searchbar-input:-ms-input-placeholder { /* IE 10+ */
+  @include designFont($blackColor,1.6rem,400,normal);
+}
+.searchbar-md .searchbar-input:-moz-placeholder { /* Firefox 18- */
+  @include designFont($blackColor,1.6rem,400,normal);
+}
+
+// list heading style
+.list {
+  
+  h2{
+  @include designFont($blackColor,1.7rem,bold,italic);
+  text-align: center;
+  text-transform: uppercase;
+  
+
+  }
+  span{
+    @include designFont($blackColor,1.5rem,400,italic);
+    text-align: center;
+  }
+}
+
+// style event date
+.EventImage{
+  
+    h3,h4{
+      @include designFont($whiteColor,3.5rem,bold,normal);
+      text-align: center;
+     
+    }
+}
+
+// section title style
+.eventContent{
+  h5{
+    @include designFont($blackColor,2.2rem,bold,normal);
+    text-transform: uppercase;
+  }
+
+  .event-date{
+    @include designFont($blackColor,1.7rem,500,normal);
+
+  }
+  &__attendance--text{
+    line-height: 4rem; 
+    span{
+    @include designFont($blackColor,1.5rem,500,normal);
+    line-height: 4rem; 
+  }
+  }
+}
+
+// button font size
+.eventactions{
+
+&__button{
+
+  @include designFont($blackColor,1.5rem,800,normal);
+ 
+}
+
+}
+
+// event Title
+.eventTitle {
+
+  h1{
+    @include designFont($blackColor,3.5rem,1000,normal);
+    text-transform: uppercase;
+  }
+  p{
+    @include designFont($subTitleColor,1.5rem,500,normal);
+
+  }
+}
+
+.eventinfo{
+
+
+  .EventInfo__Icons{
+    @include designFont($blackColor,1.6rem,800,normal);
+    span{
+      @include designFont($blackColor,1.6rem,600,normal);
+    }
+  }
+}
+
+.singleEventContent {
+  p{
+    @include designFont($blackColor,1.6rem,500,normal);
+    line-height: 2rem;
+  }
+}
+
+
+
+
+
+// type post 
+.typePost {
+  &__textBox{
+
+  .text-input{
+  @include designFont($blackColor,1.6rem,500,normal);
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    
+    @include designFont($subTitleColor,1.6rem,500,normal);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    
+    @include designFont($subTitleColor,1.6rem,500,normal);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    
+    @include designFont($subTitleColor,1.6rem,500,normal);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    
+    @include designFont($subTitleColor,1.6rem,500,normal);
+  }
+}
+  
+  
+}
+}
+
+// posts style and inner elements
+.post{
+
+&__title{
+
+  @include designFont($blackColor,1.8rem,1000,normal);
+  span{
+    @include designFont($blackColor,2.1rem,100,normal);
+  }
+
+}
+
+&__date{
+
+
+  @include designFont($subTitleColor,1.5rem,500,normal);
+  
+}
+
+ &__content{
+
+  @include designFont($blackColor,1.9rem,500,normal);
+
+}
+
+&__count--comment{
+
+  @include designFont($subTitleColor,1.8rem,500,normal);
+  line-height: 3.5rem;
+  &::before{
+  @include designFont($whiteColor,1.6rem,500,normal);
+  text-align: center;
+  }
+
+
+  
+
+}
+
+&__count--highFive{
+
+  @include designFont($subTitleColor,1.8rem,500,normal);
+  line-height: 3.5rem;
+  &::before{
+  @include designFont($whiteColor,1.6rem,500,normal);
+  text-align: center;
+  }
+}
+
+
+&__interactive{
+  @include designFont($subTitleColor,1.6rem,500,normal);
+  text-align: center;
+
+}
+
+
+
+
+
+.sharedContent{
+
+&__heading{
+  @include designFont($blackColor,2rem,1000,normal);
+  text-transform: uppercase;
+  
+}
+&__paragraph{
+  @include designFont($blackColor,1.8rem,500,normal);
+ 
+}
+&__link{
+  @include designFont($subTitleColor,1.7rem,500,normal);
+  text-decoration: none;
+}
+
+}
+
+
+
+}
+
+
+
+.item-md h2{
+  @include designFont($blackColor,2rem,1000,normal);
+  span{
+    @include designFont($blackColor,1.8rem,100,normal);
+  }
+}
+
+.card-md p{
+
+  @include designFont($blackColor,1.6rem,400,normal);
+}

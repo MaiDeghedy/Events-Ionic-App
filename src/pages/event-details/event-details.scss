@@ -1,0 +1,150 @@
+%IconStyle{
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  margin-left: 1rem;
+  margin-right: .5rem;
+  
+}
+
+
+.eventTitle {
+
+  h1{
+  
+    padding-top:0;
+  }
+  &__Description{
+    margin-bottom: 15px;
+
+  }
+
+
+}
+.single{
+.eventContent__attendance{
+&--text{
+
+  @extend %IconStyle;
+  background: $yellowColor;
+  text-align: center;
+  
+}
+
+}
+
+}
+.eventinfo{
+
+
+  .EventInfo__Icons{
+   display: block;
+   padding: 1.5rem 0;
+
+   &:before{
+     margin-right: 1.5rem;
+   }
+  }
+}
+
+.singleEventContent{
+  margin-left: 0 !important;
+  width: 100% !important;
+  .item{
+    margin-left: 0 !important;
+  }
+  
+}
+
+
+
+.typePost {
+  &__textBox{
+    .text-input{
+    min-height: 7rem;
+    }
+  }
+}
+
+
+
+.post{
+  &__image{
+
+  border-radius: 3px !important;
+
+  }
+  
+  &__count--comment{
+
+    &::before{
+   @extend %IconStyle;
+    background:$blueColor;
+    
+    }
+  }
+
+  &__count--comment{
+
+    &::before{
+      @extend %IconStyle;
+    background:$blueColor;
+    }
+  }
+  &__count--highFive{
+    &::before{
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      margin-left: 1rem;
+      margin-right: .5rem;
+      background:$greenColor;
+      }
+
+  }
+  
+  &__interactive{
+ margin: 0 auto;
+ display: block;
+
+ &::before{
+   margin-right: .5rem;
+ }
+ 
+  
+  }
+
+
+
+  .sharedContent{
+    &__image{
+    width: 90%;
+    display: block;
+    margin: 1.5rem auto;
+  }
+  &__heading{
+    text-transform: uppercase;
+    margin-left: 5%;
+    
+  }
+  &__paragraph{
+    margin-left: 5%;
+   
+  }
+  &__link{
+    margin-left: 5%;
+
+  }
+
+}
+  
+  }
+
+  .single{
+    padding-top:0;
+    .card-title{
+      padding-top:0 !important;
+    }
+  }

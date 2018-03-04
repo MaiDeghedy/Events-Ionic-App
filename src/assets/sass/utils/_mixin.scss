@@ -1,0 +1,16 @@
+// mixin for style font in all app
+
+@mixin designFont($fontColor,$fontSize,$fontWeight,$fontStyle){
+    color:$fontColor;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;    
+}
+
+@mixin clearfix {
+    &:before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
