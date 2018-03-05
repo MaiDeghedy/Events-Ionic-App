@@ -15,7 +15,7 @@ import{ServicesModule} from '../services/services.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+ 
 
 @NgModule({
   declarations: [

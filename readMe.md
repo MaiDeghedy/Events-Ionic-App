@@ -2,11 +2,11 @@
 ## Table of Contents
 
 - [Description](#Description)
--[Design](#Design)
-- [Notes](#Notes)
+- [Design](#Design)
 - [Available Scripts](#available-scripts)
-  - [ionic serve](#ionic-build)
-  - [ionic build](#ionic-build)
+  - [ionic serve](#ionic-serve)
+- [Start App](#start-app)
+
 
 
 
@@ -39,20 +39,25 @@ src -> <br/>
                         &nbsp; &nbsp; &nbsp; events.service <br/>
                         &nbsp; &nbsp; &nbsp; services.module <br/>
 
+    	&nbsp; index.html-><br/>
+WWW
+package.json
+package-lock.json
+webpack.config.json
+
+
 
 
 ## Available Scripts
 
 In the project directory, you can run:
 ### `ionic serve`
-Install the packages into node_modules folder from the package.json file.
+compile the application and start it on port 8100.abd updates the contents of www folder.
+### `ionic cordova build android`
+Build (prepare + compile) an Ionic project for Android into platforms folder 
+### `ionic cordova build ios`
+Build (prepare + compile) an Ionic project for IOS into platforms folder 
 
-### `ionic build`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-
+## Start App
+To view the app just open 'index.html' located on WWW folder it contains compiled version of the app.and for production you can just host this folder on the server.
+Or run 'ionic serve' command in the project directory.

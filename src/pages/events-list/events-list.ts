@@ -24,6 +24,7 @@ export class EventsList {
   ngOnInit(): void {
     this.getAllEvents();
   }
+  
   getAllEvents() {
     this.loading = true;
     this.eventsService.getAllEvents().subscribe(result => {
