@@ -38,12 +38,11 @@ src -> <br/>
                     &nbsp; &nbsp; services<br/>
                         &nbsp; &nbsp; &nbsp; events.service <br/>
                         &nbsp; &nbsp; &nbsp; services.module <br/>
-
-    	&nbsp; index.html-><br/>
-WWW
-package.json
-package-lock.json
-webpack.config.json
+    	&nbsp; index.html<br/> 
+      WWW<br/>
+      package.json<br/>
+      package-lock.json<br/>
+      webpack.config.json<br/>
 
 
 
@@ -51,6 +50,10 @@ webpack.config.json
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+install all packages in package.json into node modules folder
+### `ionic build`
+build the application
 ### `ionic serve`
 compile the application and start it on port 8100.abd updates the contents of www folder.
 ### `ionic cordova build android`
@@ -60,4 +63,4 @@ Build (prepare + compile) an Ionic project for IOS into platforms folder
 
 ## Start App
 To view the app just open 'index.html' located on WWW folder it contains compiled version of the app.and for production you can just host this folder on the server.
-Or run 'ionic serve' command in the project directory.
+Or run 'npm install'->'ionic build'->'ionic serve' command in the project directory but first you should have ionic cordova installed in your machine if not please use this command 'npm install -g ionic cordova' that command install ionic globally in your machine
